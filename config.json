@@ -1,0 +1,364 @@
+{
+  "paper": "Paper_4_Credit_Risk",
+  "title": "Explainable Credit Risk Assessment",
+  "subtitle": "Fairness-Aware Research Demonstration",
+  "description": "Estimates bad-credit risk using historical German Credit dataset attributes.",
+  "warning": "Research demonstration only. Not suitable for real loan approvals, automated lending decisions or individual financial recommendations.",
+  "positive_class": "2",
+  "threshold": 0.3,
+  "feature_order": [
+    "Attribute1",
+    "Attribute2",
+    "Attribute3",
+    "Attribute4",
+    "Attribute5",
+    "Attribute6",
+    "Attribute7",
+    "Attribute8",
+    "Attribute9",
+    "Attribute10",
+    "Attribute11",
+    "Attribute12",
+    "Attribute13",
+    "Attribute14",
+    "Attribute15",
+    "Attribute16",
+    "Attribute17",
+    "Attribute18",
+    "Attribute19",
+    "Attribute20"
+  ],
+  "features": [
+    {
+      "name": "Attribute1",
+      "data_type": "string",
+      "input_type": "select",
+      "default": "A14",
+      "choices": [
+        "A14",
+        "A11",
+        "A12",
+        "A13"
+      ],
+      "section": "Applicant Credit Attributes",
+      "description": "Checking Account Status",
+      "choice_labels": {
+        "A14": "No checking account",
+        "A11": "Checking balance < 0",
+        "A12": "Checking balance 0–200",
+        "A13": "Checking balance >= 200"
+      }
+    },
+    {
+      "name": "Attribute2",
+      "data_type": "integer",
+      "input_type": "number",
+      "default": 18,
+      "choices": [],
+      "section": "Applicant Credit Attributes",
+      "description": "Credit Duration (Months)"
+    },
+    {
+      "name": "Attribute3",
+      "data_type": "string",
+      "input_type": "select",
+      "default": "A32",
+      "choices": [
+        "A32",
+        "A34",
+        "A33",
+        "A31",
+        "A30"
+      ],
+      "section": "Applicant Credit Attributes",
+      "description": "Credit History",
+      "choice_labels": {
+        "A32": "A32",
+        "A34": "A34",
+        "A33": "A33",
+        "A31": "A31",
+        "A30": "A30"
+      }
+    },
+    {
+      "name": "Attribute4",
+      "data_type": "string",
+      "input_type": "select",
+      "default": "A43",
+      "choices": [
+        "A43",
+        "A40",
+        "A42",
+        "A41",
+        "A49",
+        "A46",
+        "A45",
+        "A44",
+        "A410",
+        "A48"
+      ],
+      "section": "Applicant Credit Attributes",
+      "description": "Credit Purpose",
+      "choice_labels": {
+        "A43": "A43",
+        "A40": "A40",
+        "A42": "A42",
+        "A41": "A41",
+        "A49": "A49",
+        "A46": "A46",
+        "A45": "A45",
+        "A44": "A44",
+        "A410": "A410",
+        "A48": "A48"
+      }
+    },
+    {
+      "name": "Attribute5",
+      "data_type": "integer",
+      "input_type": "number",
+      "default": 2317,
+      "choices": [],
+      "section": "Applicant Credit Attributes",
+      "description": "Credit Amount"
+    },
+    {
+      "name": "Attribute6",
+      "data_type": "string",
+      "input_type": "select",
+      "default": "A61",
+      "choices": [
+        "A61",
+        "A65",
+        "A62",
+        "A63",
+        "A64"
+      ],
+      "section": "Applicant Credit Attributes",
+      "description": "Savings or Bonds",
+      "choice_labels": {
+        "A61": "A61",
+        "A65": "A65",
+        "A62": "A62",
+        "A63": "A63",
+        "A64": "A64"
+      }
+    },
+    {
+      "name": "Attribute7",
+      "data_type": "string",
+      "input_type": "select",
+      "default": "A73",
+      "choices": [
+        "A73",
+        "A75",
+        "A72",
+        "A74",
+        "A71"
+      ],
+      "section": "Applicant Credit Attributes",
+      "description": "Employment Duration",
+      "choice_labels": {
+        "A73": "A73",
+        "A75": "A75",
+        "A72": "A72",
+        "A74": "A74",
+        "A71": "A71"
+      }
+    },
+    {
+      "name": "Attribute8",
+      "data_type": "integer",
+      "input_type": "number",
+      "default": 3,
+      "choices": [],
+      "section": "Applicant Credit Attributes",
+      "description": "Installment Rate"
+    },
+    {
+      "name": "Attribute9",
+      "data_type": "string",
+      "input_type": "select",
+      "default": "A93",
+      "choices": [
+        "A93",
+        "A92",
+        "A94",
+        "A91"
+      ],
+      "section": "Applicant Credit Attributes",
+      "description": "Personal Status / Sex Code",
+      "choice_labels": {
+        "A93": "Male, single",
+        "A92": "Female, divorced/separated/married",
+        "A94": "Male, married/widowed",
+        "A91": "Male, divorced/separated"
+      }
+    },
+    {
+      "name": "Attribute10",
+      "data_type": "string",
+      "input_type": "select",
+      "default": "A101",
+      "choices": [
+        "A101",
+        "A103",
+        "A102"
+      ],
+      "section": "Applicant Credit Attributes",
+      "description": "Other Debtors / Guarantors",
+      "choice_labels": {
+        "A101": "A101",
+        "A103": "A103",
+        "A102": "A102"
+      }
+    },
+    {
+      "name": "Attribute11",
+      "data_type": "integer",
+      "input_type": "number",
+      "default": 3,
+      "choices": [],
+      "section": "Applicant Credit Attributes",
+      "description": "Present Residence Duration"
+    },
+    {
+      "name": "Attribute12",
+      "data_type": "string",
+      "input_type": "select",
+      "default": "A123",
+      "choices": [
+        "A123",
+        "A121",
+        "A122",
+        "A124"
+      ],
+      "section": "Applicant Credit Attributes",
+      "description": "Property",
+      "choice_labels": {
+        "A123": "A123",
+        "A121": "A121",
+        "A122": "A122",
+        "A124": "A124"
+      }
+    },
+    {
+      "name": "Attribute13",
+      "data_type": "integer",
+      "input_type": "number",
+      "default": 33,
+      "choices": [],
+      "section": "Applicant Credit Attributes",
+      "description": "Age (Years)"
+    },
+    {
+      "name": "Attribute14",
+      "data_type": "string",
+      "input_type": "select",
+      "default": "A143",
+      "choices": [
+        "A143",
+        "A141",
+        "A142"
+      ],
+      "section": "Applicant Credit Attributes",
+      "description": "Other Installment Plans",
+      "choice_labels": {
+        "A143": "A143",
+        "A141": "A141",
+        "A142": "A142"
+      }
+    },
+    {
+      "name": "Attribute15",
+      "data_type": "string",
+      "input_type": "select",
+      "default": "A152",
+      "choices": [
+        "A152",
+        "A151",
+        "A153"
+      ],
+      "section": "Applicant Credit Attributes",
+      "description": "Housing",
+      "choice_labels": {
+        "A152": "A152",
+        "A151": "A151",
+        "A153": "A153"
+      }
+    },
+    {
+      "name": "Attribute16",
+      "data_type": "integer",
+      "input_type": "number",
+      "default": 1,
+      "choices": [],
+      "section": "Applicant Credit Attributes",
+      "description": "Existing Credits"
+    },
+    {
+      "name": "Attribute17",
+      "data_type": "string",
+      "input_type": "select",
+      "default": "A173",
+      "choices": [
+        "A173",
+        "A172",
+        "A174",
+        "A171"
+      ],
+      "section": "Applicant Credit Attributes",
+      "description": "Occupation",
+      "choice_labels": {
+        "A173": "A173",
+        "A172": "A172",
+        "A174": "A174",
+        "A171": "A171"
+      }
+    },
+    {
+      "name": "Attribute18",
+      "data_type": "integer",
+      "input_type": "number",
+      "default": 1,
+      "choices": [],
+      "section": "Applicant Credit Attributes",
+      "description": "Dependents"
+    },
+    {
+      "name": "Attribute19",
+      "data_type": "string",
+      "input_type": "select",
+      "default": "A191",
+      "choices": [
+        "A191",
+        "A192"
+      ],
+      "section": "Applicant Credit Attributes",
+      "description": "Telephone",
+      "choice_labels": {
+        "A191": "A191",
+        "A192": "A192"
+      }
+    },
+    {
+      "name": "Attribute20",
+      "data_type": "string",
+      "input_type": "select",
+      "default": "A201",
+      "choices": [
+        "A201",
+        "A202"
+      ],
+      "section": "Applicant Credit Attributes",
+      "description": "Foreign Worker",
+      "choice_labels": {
+        "A201": "A201",
+        "A202": "A202"
+      }
+    }
+  ],
+  "classes": [
+    "1",
+    "2"
+  ]
+}
